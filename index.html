@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ilmedova Guljahan | Developer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#427ef7',
+                        lightbg: '#f3f4f6'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-lightbg dark:bg-gray-950 text-gray-800 dark:text-gray-200 transition">
+
+    <!-- NAV -->
+    <nav class="max-w-5xl mx-auto mt-8 bg-white dark:bg-gray-900 
+            rounded-xl px-6 py-3 shadow-sm border border-gray-200 dark:border-gray-800 
+            flex justify-between items-center text-sm">
+
+        <div class="font-semibold">Ilmedova Guljahan</div>
+
+        <div class="flex gap-6 items-center text-gray-600 dark:text-gray-300">
+
+            <a href="#about" class="flex items-center gap-1 hover:text-primary transition">
+                <i data-lucide="user" class="w-4 h-4"></i> About
+            </a>
+
+            <a href="#skills" class="flex items-center gap-1 hover:text-primary transition">
+                <i data-lucide="code" class="w-4 h-4"></i> Skills
+            </a>
+
+            <a href="#projects" class="flex items-center gap-1 hover:text-primary transition">
+                <i data-lucide="folder" class="w-4 h-4"></i> Projects
+            </a>
+
+            <a href="#stats" class="flex items-center gap-1 hover:text-primary transition">
+                <i data-lucide="bar-chart-3" class="w-4 h-4"></i> Stats
+            </a>
+
+            <a href="#contact" class="flex items-center gap-1 hover:text-primary transition">
+                <i data-lucide="mail" class="w-4 h-4"></i> Contact
+            </a>
+
+            <button onclick="toggleDark()" class="text-gray-500 hover:text-primary transition flex items-center">
+
+                <!-- Sun Icon (light mode) -->
+                <i id="sunIcon" data-lucide="sun" class="w-4 h-4 hidden"></i>
+
+                <!-- Moon Icon (dark mode) -->
+                <i id="moonIcon" data-lucide="moon" class="w-4 h-4"></i>
+
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-5xl mx-auto mt-6 mb-16 space-y-6 px-4">
+
+        <!-- ABOUT -->
+        <section id="about" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
+            border border-gray-200 dark:border-gray-800 p-8 space-y-4 relative">
+
+            <!-- blue accent line -->
+            <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xl"></div>
+
+            <div class="flex items-center gap-6">
+                <img src="assets/img/profile.jpg"
+                    alt="Guljahan"
+                    class="w-20 h-20 rounded-full border-2 border-primary object-cover">
+
+                <div>
+                    <h1 class="text-xl font-semibold">
+                        Guljahan <span class="text-primary">(Giana)</span>
+                    </h1>
+
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                        Full Stack Developer
+                    </p>
+
+                    <p class="text-xs text-gray-400 mt-1">
+                        Backend systems • APIs • Modern Frontend
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-sm text-gray-600 dark:text-gray-400 max-w-2xl">
+                I build scalable backend systems using FastAPI and Java,
+                and modern frontend applications with Vue, React, and Next.js.
+                Focused on clean architecture and performance optimization.
+            </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
+      border border-gray-200 dark:border-gray-800 p-8 space-y-8 relative">
+
+            <h2 class="text-lg font-semibold">Skills</h2>
+
+            <!-- TECH STACK -->
+            <div>
+                <h3 class="text-sm font-medium mb-4 text-gray-500 dark:text-gray-400">
+                    Tech Stack
+                </h3>
+
+                <div class="grid grid-cols-4 md:grid-cols-9 gap-3 text-[11px] text-center">
+
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            class="h-5 mx-auto mb-1">Python</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                            class="h-5 mx-auto mb-1">FastAPI</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                            class="h-5 mx-auto mb-1">Java</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            class="h-5 mx-auto mb-1">MySQL</div>
+                    <div><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            class="h-5 mx-auto mb-1">Postgres</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                            class="h-5 mx-auto mb-1">Vue</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
+                            class="h-5 mx-auto mb-1">Nuxt</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            class="h-5 mx-auto mb-1">React</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                            class="h-5 mx-auto mb-1">Next</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                            class="h-5 mx-auto mb-1">Git</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg"
+                            class="h-5 mx-auto mb-1">Swagger</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                            class="h-5 mx-auto mb-1">GraphQL</div>
+                    <div><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            class="h-5 mx-auto mb-1">JavaScript</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            class="h-5 mx-auto mb-1">Node</div>
+                    <div><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                            class="h-5 mx-auto mb-1">Tailwind</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            class="h-5 mx-auto mb-1">Docker</div>
+                    <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+                            class="h-5 mx-auto mb-1">Ubuntu</div>
+
+                </div>
+            </div>
+
+            <!-- LANGUAGES -->
+            <div>
+                <h3 class="text-sm font-medium mb-4 text-gray-500 dark:text-gray-400">
+                    Languages
+                </h3>
+
+                <div class="flex gap-4 text-xs">
+
+                    <span class="px-3 py-1 rounded-md bg-primary/10 text-primary">
+                        🇷🇺 Russian — Fluent
+                    </span>
+
+                    <span class="px-3 py-1 rounded-md bg-primary/10 text-primary">
+                        🇬🇧 English — B2
+                    </span>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+        <section id="stats" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
+        border border-gray-200 dark:border-gray-800 p-8 space-y-6 relative">
+
+            <h2 class="text-lg font-semibold">Statistics</h2>
+
+            <!-- Contribution Graph -->
+            <img class="w-full max-w-4xl" src="https://ghchart.rshah.org/427ef7/GuljahanG" />
+
+            <!-- Cards Row -->
+            <!-- <div class="flex flex-wrap gap-6 items-start"> -->
+            <!--  -->
+            <!-- <img class="w-72" -->
+            <!-- src="https://github-readme-stats-sigma-five.vercel.app/api?username=GuljahanG&show_icons=true&hide_border=true&title_color=427ef7&icon_color=427ef7"> -->
+            <!--  -->
+            <!-- <img class="w-72" -->
+            <!-- src="https://leetcard.jacoblin.cool/ilmedovaguljahan?ext=heatmap"> -->
+            <!--  -->
+            <!-- </div> -->
+
+            <!-- Follow Section -->
+            <div class="mt-4 flex items-center justify-between 
+              border border-gray-200 dark:border-gray-800 
+              rounded-lg px-5 py-4">
+
+                <div class="flex items-center gap-3">
+                    <i data-lucide="github" class="w-5 h-5 text-primary"></i>
+
+                    <div>
+                        <p class="text-sm font-medium">Follow me on GitHub</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">
+                            @GuljahanG
+                        </p>
+                    </div>
+                </div>
+
+                <a href="https://github.com/GuljahanG" target="_blank" class="text-xs bg-primary text-white px-4 py-2 rounded-md 
+                  hover:opacity-90 transition">
+                    Follow
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
+            border border-gray-200 dark:border-gray-800 p-8 space-y-6 relative">
+                <h2 class="text-lg font-semibold">Projects</h2>
+                <div class="space-y-6">
+                    <!-- Project 7 -->
+                    <div class="border border-gray-200 dark:border-gray-800 
+                                rounded-lg p-5 hover:border-primary transition">
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <!-- Project Image -->
+                            <div class="md:w-72 flex-shrink-0">
+                                <img src="assets/img/test-prep.png"
+                                    alt="AI Test Preparation Platform"
+                                    class="w-full aspect-video object-cover rounded-lg">
+                            </div>
+
+                            <!-- Project Content -->
+                             <div class="flex-1 flex flex-col">
+
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-sm font-semibold">
+                                        AI-Helper for Test Preparation Platform
+                                    </h3>
+
+                                    <a href="#"
+                                    target="_blank"
+                                    class="text-s text-primary">
+                                     ongoing
+                                    </a>
+                                </div>
+
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                    Developing an AI-powered test preparation platform designed to simulate real exam environments and provide adaptive learning experiences.
+                                    Integrated OpenAI APIs to dynamically generate practice tasks, evaluate user responses, and deliver instant feedback across reading, writing, speaking, and listening modules.
+                                </p>
+
+                                <!-- Tags -->
+                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python Fast API</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Vue js</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Nuxt js</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Tailwind</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Open AI</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Swagger</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">MySQL</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Project 6 -->
+                    <div class="border border-gray-200 dark:border-gray-800 
+                                rounded-lg p-5 hover:border-primary transition">
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <!-- Project Image -->
+                            <div class="md:w-72 flex-shrink-0">
+                                <img src="assets/img/creative-paradise.jpeg"
+                                    alt="CreativeParadise"
+                                    class="w-full aspect-video object-cover rounded-lg">
+                            </div>
+
+                            <!-- Project Content -->
+                             <div class="flex-1 flex flex-col">
+
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-sm font-semibold">
+                                        CreativeParadise - All-in-One Business Platform
+                                    </h3>
+
+                                    <a href="assets/img/creative-paradise.jpeg"
+                                    target="_blank"
+                                    class="text-s text-primary">
+                                     ->
+                                    </a>
+                                </div>
+
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                    Contributed to the development of an all-in-one business management platform, 
+                                    designing and implementing a scalable Task Management module with nested tasks, 
+                                    progress tracking, and real-time updates.
+
+                                    Optimized database queries and improved data processing performance, 
+                                    ensuring efficient handling of large task structures and user workflows.
+                                </p>
+
+                                <!-- Tags -->
+                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Vue js</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Laravel</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Tailwind</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Open AI</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Swagger</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">MySQL</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Docker (CI/CD)</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="border border-gray-200 dark:border-gray-800 
+                                rounded-lg p-5 hover:border-primary transition">
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <!-- Project Image -->
+                            <div class="md:w-72 flex-shrink-0">
+                                <img src="assets/img/duralga.webp"
+                                    alt="Duralga - API"
+                                    class="w-full aspect-video object-cover rounded-lg">
+                            </div>
+
+                            <!-- Project Content -->
+                             <div class="flex-1 flex flex-col">
+
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-sm font-semibold">
+                                        Duralga - API
+                                    </h3>
+
+                                    <a href="https://apps.apple.com/us/app/duralga/id1607990462"
+                                    target="_blank"
+                                    class="text-s text-primary">
+                                     →
+                                    </a>
+                                </div>
+
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                    DURALGA is a public transit app. Developed distributed back-end services for routing, retrieving transit information, ticketing, real-time notifications for approaching vehicles, watchlist and Geospatial data processing.
+                                </p>
+
+                                <!-- Tags -->
+                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python Fast API</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">C++</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">OSRM</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Geocoding</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Swagger</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Redis</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="border border-gray-200 dark:border-gray-800 
+                                rounded-lg p-5 hover:border-primary transition">
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <!-- Project Image -->
+                            <div class="md:w-72 flex-shrink-0">
+                                <img src="assets/img/ashgabatcity.webp"
+                                    alt="Ashgabat city 3D map"
+                                    class="w-full aspect-video object-cover rounded-lg">
+                            </div>
+
+                            <!-- Project Content -->
+                             <div class="flex-1 flex flex-col">
+
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-sm font-semibold">
+                                         Ashgabat city 3D map
+                                    </h3>
+
+                                    <a href="https://ashgabatcity.gov.tm/3dmap/"
+                                    target="_blank"
+                                    class="text-s text-primary">
+                                     →
+                                    </a>
+                                </div>
+
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                    The Ashgabat City 3D Map is a web-based application built using Three.js for rendering 3D models of the city. Objects are exported in GLTF format for efficient loading and display. The map supports dynamic camera controls and interaction, with optimized performance for real-time rendering.
+                                </p>
+
+                                <!-- Tags -->
+                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">ThreeJS</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Bootstrap</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">JavaScript</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">jQuery</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">WebGL</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="border border-gray-200 dark:border-gray-800 
+                                rounded-lg p-5 hover:border-primary transition">
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <!-- Project Image -->
+                            <div class="md:w-72 flex-shrink-0">
+                                <img src="assets/img/it-solutions.png"
+                                    alt="IT solutions"
+                                    class="w-full aspect-video object-cover rounded-lg">
+                            </div>
+
+                            <!-- Project Content -->
+                             <div class="flex-1 flex flex-col">
+
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-sm font-semibold">
+                                        IT solutions
+                                    </h3>
+
+                                    <a href="https://nokat.com.tm/"
+                                    target="_blank"
+                                    class="text-s text-primary">
+                                     →
+                                    </a>
+                                </div>
+
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                    IT solutions aimed at providing comprehencive services to businesses in need of technological solutions.
+                                </p>
+
+                                <!-- Tags -->
+                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">JavaScript</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Bootstrap</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Laravel</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">PHP</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Responsive UI</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="border border-gray-200 dark:border-gray-800 
+                                rounded-lg p-5 hover:border-primary transition">
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <!-- Project Image -->
+                            <div class="md:w-72 flex-shrink-0">
+                                <img src="assets/img/mlsp.png"
+                                    alt="Online Services Platform – Ministry of Labor and Social Protection of Turkmenistan"
+                                    class="w-full aspect-video object-cover rounded-lg">
+                            </div>
+
+                            <!-- Project Content -->
+                             <div class="flex-1 flex flex-col">
+
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-sm font-semibold">
+                                        Online Services Platform – Ministry of Labor and Social Protection of Turkmenistan
+                                    </h3>
+
+                                    <a href="https://www.mlsp.gov.tm/"
+                                    target="_blank"
+                                    class="text-s text-primary">
+                                     →
+                                    </a>
+                                </div>
+
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                    Contributed to the development of a dynamic online services platform 
+                                    for the Ministry of Labor and Social Protection of Turkmenistan.
+
+                                    Developed a user-friendly frontend interface for citizens to access 
+                                    digital government services and integrated a nationwide vacancy system 
+                                    displaying job opportunities across Turkmenistan.
+                                </p>
+
+                                <!-- Tags -->
+                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Vue.js</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Bootstrap</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Slick.js</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">JavaScript</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python - FastAPI</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">PHP</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">GraphQL</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">REST API</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Responsive UI</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Government Platform</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 1 -->
+                    <div class="border border-gray-200 dark:border-gray-800 
+                                rounded-lg p-5 hover:border-primary transition">
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <!-- Project Image -->
+                            <div class="md:w-72 flex-shrink-0">
+                                <img src="assets/img/bank.png"
+                                    alt="Bank Microservices Project"
+                                    class="w-full aspect-video object-cover rounded-lg">
+                            </div>
+
+                            <!-- Project Content -->
+                            <div class="flex-1 flex flex-col">
+
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-sm font-semibold">
+                                        Microservices Banking Platform – Stock Commercial Bank “Rysgal”
+                                    </h3>
+
+                                    <a href="https://www.rysgalbank.com.tm/"
+                                    target="_blank"
+                                    class="text-s text-primary">
+                                     →
+                                    </a>
+                                </div>
+
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                    Contributed to the development of a production-grade microservices platform 
+                                    for Stock Commercial Bank “Rysgal”, including Internet Banking and 
+                                    supporting financial services.
+
+                                    Focused on scalability, system stability, and secure authentication mechanisms.
+                                </p>
+
+                                <!-- Tags -->
+                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Bootstrap</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">PHP</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">MySQL</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Docker</span>
+                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Github Actions (CI/CD)</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
+  border border-gray-200 dark:border-gray-800 p-8 space-y-6 relative">
+
+            <!-- blue accent line -->
+            <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xl"></div>
+
+            <h2 class="text-lg font-semibold">Contact</h2>
+
+            <div class="flex flex-col gap-4 text-sm">
+
+                <!-- Email -->
+                <a href="mailto:your@email.com" class="flex items-center gap-3 hover:text-primary transition">
+                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 13.065L.015 4.5C.005 4.665 0 4.832 0 5v14c0 
+        1.105.895 2 2 2h20c1.105 0 2-.895 
+        2-2V5c0-.168-.005-.335-.015-.5L12 13.065z" />
+                        <path d="M23.985 3.5C23.775 2.64 22.99 2 22 2H2c-.99 
+        0-1.775.64-1.985 1.5L12 11.935 23.985 3.5z" />
+                    </svg>
+                    gurbanmyradownaguljahan@gmail.com
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/guljahan-ilmedova-a9540b256/" target="_blank"
+                    class="flex items-center gap-3 hover:text-primary transition">
+
+                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452H16.9v-5.569c0-1.327-.027-3.037-1.851-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.367V9h3.4v1.561h.048c.474-.9 1.637-1.851 3.368-1.851 3.6 0 4.267 2.368 4.267 5.455v6.287zM5.337 7.433a1.96 1.96 0 1 1 0-3.92 1.96 1.96 0 0 1 0 3.92zM6.964 20.452H3.707V9h3.257v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.553C0 23.229.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.276V1.723C24 .771 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/GuljahanG" target="_blank"
+                    class="flex items-center gap-3 hover:text-primary transition">
+
+                    <img src="https://cdn.simpleicons.org/github/427ef7" class="w-4 h-4">
+                    GitHub
+                </a>
+
+                <!-- Telegram -->
+                <a href="https://t.me/guljahanG" target="_blank"
+                    class="flex items-center gap-3 hover:text-primary transition">
+
+                    <img src="https://cdn.simpleicons.org/telegram/427ef7" class="w-4 h-4">
+                    Telegram
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        function toggleDark() {
+            document.documentElement.classList.toggle('dark')
+        }
+        lucide.createIcons()
+    </script>
+
+</body>
+
+</html>
