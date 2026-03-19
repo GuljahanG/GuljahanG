@@ -46,45 +46,50 @@
 
 <body class="bg-lightbg dark:bg-gray-950 text-gray-800 dark:text-gray-200 transition">
 
-    <!-- NAV -->
+   
     <nav class="max-w-5xl mx-auto mt-8 bg-white dark:bg-gray-900 
             rounded-xl px-6 py-3 shadow-sm border border-gray-200 dark:border-gray-800 
             flex justify-between items-center text-sm">
 
         <div class="font-semibold">Ilmedova Guljahan</div>
 
-        <div class="flex gap-14 items-center text-gray-600 dark:text-gray-300">
+        <div class="flex gap-10 items-center text-gray-600 dark:text-gray-300">
 
-            <a href="#about" class="flex items-center gap-1 hover:text-primary transition">
+            <a href="#about" data-i18n="about" class="flex items-center gap-1 hover:text-primary transition">
                 <i data-lucide="user" class="w-4 h-4"></i> About
             </a>
 
-            <a href="#skills" class="flex items-center gap-1 hover:text-primary transition">
+            <a href="#skills" data-i18n="skills" class="flex items-center gap-1 hover:text-primary transition">
                 <i data-lucide="code" class="w-4 h-4"></i> Skills
             </a>
 
-            <a href="#projects" class="flex items-center gap-1 hover:text-primary transition">
+            <a href="#projects" data-i18n="projects" class="flex items-center gap-1 hover:text-primary transition">
                 <i data-lucide="folder" class="w-4 h-4"></i> Projects
             </a>
 
-            <a href="#stats" class="flex items-center gap-1 hover:text-primary transition">
+            <a href="#stats" data-i18n="stats" class="flex items-center gap-1 hover:text-primary transition">
                 <i data-lucide="bar-chart-3" class="w-4 h-4"></i> Stats
             </a>
 
-            <a href="#honors" class="flex items-center gap-1 hover:text-primary transition">
+            <a href="#honors" data-i18n="honors" class="flex items-center gap-1 hover:text-primary transition">
                 <i data-lucide="award" class="w-4 h-4"></i> Honors
             </a>
 
-            <a href="#contact" class="flex items-center gap-1 hover:text-primary transition">
+            <a href="#contact" data-i18n="contact" class="flex items-center gap-1 hover:text-primary transition">
                 <i data-lucide="mail" class="w-4 h-4"></i> Contact
             </a>
-
+            <select id="langSwitcher" onchange="setLanguage(this.value)"
+                class="border rounded px-2 py-1 bg-transparent 
+                    outline-none focus:outline-none focus:ring-0 focus:border-gray-300">
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+            </select>
             <button onclick="toggleDark()" class="text-gray-500 hover:text-primary transition flex items-center">
 
-                <!-- Sun Icon (light mode) -->
+               
                 <i id="sunIcon" data-lucide="sun" class="w-4 h-4 hidden"></i>
 
-                <!-- Moon Icon (dark mode) -->
+              
                 <i id="moonIcon" data-lucide="moon" class="w-4 h-4"></i>
 
             </button>
@@ -92,14 +97,13 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTAINER -->
     <div class="max-w-5xl mx-auto mt-6 mb-16 space-y-6 px-4">
 
-        <!-- ABOUT -->
+  
         <section id="about" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
             border border-gray-200 dark:border-gray-800 p-8 space-y-4 relative">
 
-                <!-- blue accent line -->
+            
                 <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xl"></div>
                 <div class="flex items-center justify-between flex-wrap gap-4">
                     <div class="flex items-center gap-6">
@@ -112,7 +116,7 @@
                                 Guljahan <span class="text-primary">(Giana)</span>
                             </h1>
 
-                            <p class="text-sm text-gray-500 dark:text-gray-400">
+                            <p data-i18n="role" class="text-sm text-gray-500 dark:text-gray-400">
                                 Full Stack Developer
                             </p>
 
@@ -121,8 +125,9 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Resume Button -->
+                 
                     <a href="assets/resume.pdf"
+                    data-i18n="download_cv"
                     download
                     class="flex items-center gap-2 text-sm 
                     bg-[#427ef7] text-white px-4 py-2 
@@ -133,20 +138,20 @@
                         Download Resume
                     </a>
                 </div>
-                <p class="text-sm text-gray-600 dark:text-gray-400 max-w-2xl">
+                <p data-i18n="about_desc" class="text-sm text-gray-600 dark:text-gray-400 max-w-2xl">
                     I build scalable backend systems using Python FastAPI and PHP Laravel,
                     and modern frontend applications with Vue and Nuxt.js.
                     Focused on clean architecture and performance optimization.
                 </p>
             </section>
 
-        <!-- SKILLS -->
+    
         <section id="skills" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
             border border-gray-200 dark:border-gray-800 p-8 space-y-8 relative">
 
-            <h2 class="text-lg font-semibold">Skills</h2>
+            <h2 class="text-lg font-semibold" data-i18n="skills">Skills</h2>
 
-            <!-- TECH STACK -->
+          
             <div>
                 <h3 class="text-sm font-medium mb-4 text-gray-500 dark:text-gray-400">
                     Tech Stack
@@ -197,7 +202,7 @@
                 </div>
             </div>
 
-            <!-- LANGUAGES -->
+      
             <div>
                 <h3 class="text-sm font-medium mb-4 text-gray-500 dark:text-gray-400">
                     Languages
@@ -218,13 +223,12 @@
 
         </section>
 
-        <!-- STATS -->
         <section id="stats" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
             border border-gray-200 dark:border-gray-800 p-8 space-y-6">
 
-                <!-- Header -->
+             
                 <div class="flex items-center justify-between">
-                    <h2 class="text-lg font-semibold">Statistics</h2>
+                    <h2 class="text-lg font-semibold" data-i18n="stats">Statistics</h2>
 
                     <a href="https://github.com/GuljahanG"
                     target="_blank"
@@ -238,11 +242,11 @@
                     </a>
                 </div>
 
-                <!-- Contribution Graph -->
+              
                 <img class="w-full max-w-4xl"
                     src="https://ghchart.rshah.org/427ef7/GuljahanG" />
 
-                <!-- Cards Row -->
+          
                 <div class="flex flex-wrap gap-6 items-start">
 
                     <div class="flex justify-center">
@@ -252,29 +256,28 @@
 
                 </div>
 
-            </section>
+        </section>
 
-        <!-- PROJECTS -->
         <section id="projects" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
             border border-gray-200 dark:border-gray-800 p-8 space-y-6 relative">
-                <h2 class="text-lg font-semibold">Projects</h2>
+                <h2 class="text-lg font-semibold" data-i18n="projects">Projects</h2>
                 <div class="space-y-6">
-                    <!-- Project 8 -->
+         
                     <div class="border border-gray-200 dark:border-gray-800 
                                 rounded-lg p-5 hover:border-primary transition">
                         <div class="flex flex-col md:flex-row gap-5">
-                            <!-- Project Image -->
+                    
                             <div class="md:w-72 flex-shrink-0">
                                 <img src="assets/img/test-prep.png"
                                     alt="AI Test Preparation Platform"
                                     class="w-full aspect-video object-cover rounded-lg">
                             </div>
 
-                            <!-- Project Content -->
+                   
                              <div class="flex-1 flex flex-col">
 
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
+                                    <h3 class="text-sm font-semibold" data-i18n="project1_title">
                                         AI-Helper for Test Preparation Platform
                                     </h3>
 
@@ -285,12 +288,12 @@
                                     </a>
                                 </div>
 
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                <p data-i18n="project1_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3" >
                                     Developing an AI-powered test preparation platform designed to simulate real exam environments and provide adaptive learning experiences.
                                     Integrated OpenAI APIs to dynamically generate practice tasks, evaluate user responses, and deliver instant feedback across reading, writing, speaking, and listening modules.
                                 </p>
 
-                                <!-- Tags -->
+                        
                                 <div class="mt-auto flex flex-wrap gap-2 text-xs">
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python Fast API</span>
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Vue js</span>
@@ -304,22 +307,22 @@
                             </div>
                         </div>
                     </div>
-                     <!-- Project 7 -->
+                
                     <div class="border border-gray-200 dark:border-gray-800 
                                 rounded-lg p-5 hover:border-primary transition">
                         <div class="flex flex-col md:flex-row gap-5">
-                            <!-- Project Image -->
+                     
                             <div class="md:w-72 flex-shrink-0">
                                 <img src="assets/img/creative-paradise.jpeg"
                                     alt="CreativeParadise"
                                     class="w-full aspect-video object-cover rounded-lg">
                             </div>
 
-                            <!-- Project Content -->
+                        
                              <div class="flex-1 flex flex-col">
 
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
+                                    <h3 data-i18n="project2_title" class="text-sm font-semibold">
                                         CreativeParadise - All-in-One Business Platform
                                     </h3>
 
@@ -330,7 +333,7 @@
                                     </a>
                                 </div>
 
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                <p data-i18n="project2_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3">
                                     Contributed to the development of an all-in-one business management platform, 
                                     designing and implementing a scalable Task Management module with nested tasks, 
                                     progress tracking, and real-time updates.
@@ -339,7 +342,7 @@
                                     ensuring efficient handling of large task structures and user workflows.
                                 </p>
 
-                                <!-- Tags -->
+                          
                                 <div class="mt-auto flex flex-wrap gap-2 text-xs">
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python</span>
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Vue js</span>
@@ -354,91 +357,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project 6 -->
-                    <!-- <div class="border border-gray-200 dark:border-gray-800 
-                                rounded-lg p-5 hover:border-primary transition">
-                        <div class="flex flex-col md:flex-row gap-5">
-                        
-                            <div class="md:w-72 flex-shrink-0">
-                                <img src="assets/img/duralga.webp"
-                                    alt="Duralga - API"
-                                    class="w-full aspect-video object-cover rounded-lg">
-                            </div>
-
-                         
-                             <div class="flex-1 flex flex-col">
-
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
-                                        Duralga - API
-                                    </h3>
-
-                                    <a href="https://apps.apple.com/us/app/duralga/id1607990462"
-                                    target="_blank"
-                                    class="text-s text-primary">
-                                     →
-                                    </a>
-                                </div>
-
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
-                                    DURALGA is a public transit app. Developed distributed back-end services for routing, retrieving transit information, ticketing, real-time notifications for approaching vehicles, watchlist and Geospatial data processing.
-                                </p>
-
-                        
-                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python Fast API</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">C++</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">OSRM</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Geocoding</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Swagger</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Redis</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- Project 5 -->
-                    <!-- <div class="border border-gray-200 dark:border-gray-800 
-                                rounded-lg p-5 hover:border-primary transition">
-                        <div class="flex flex-col md:flex-row gap-5">
-                      
-                            <div class="md:w-72 flex-shrink-0">
-                                <img src="assets/img/ashgabatcity.webp"
-                                    alt="Ashgabat city 3D map"
-                                    class="w-full aspect-video object-cover rounded-lg">
-                            </div>
-
-                             <div class="flex-1 flex flex-col">
-
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
-                                         Ashgabat city 3D map
-                                    </h3>
-
-                                    <a href="https://ashgabatcity.gov.tm/3dmap/"
-                                    target="_blank"
-                                    class="text-s text-primary">
-                                     →
-                                    </a>
-                                </div>
-
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
-                                    The Ashgabat City 3D Map is a web-based application built using Three.js for rendering 3D models of the city. Objects are exported in GLTF format for efficient loading and display. The map supports dynamic camera controls and interaction, with optimized performance for real-time rendering.
-                                </p>
-
-                              
-                                <div class="mt-auto flex flex-wrap gap-2 text-xs">
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">ThreeJS</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Bootstrap</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">JavaScript</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">jQuery</span>
-                                    <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">WebGL</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- Project 4 -->
+                    
                       <div class="border border-gray-200 dark:border-gray-800 
                                 rounded-lg p-5 hover:border-primary transition">
                         <div class="flex flex-col md:flex-row gap-5">
@@ -453,7 +372,7 @@
                              <div class="flex-1 flex flex-col">
 
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
+                                    <h3 data-i18n="project3_title" class="text-sm font-semibold">
                                         E-commerce Platform
                                     </h3>
 
@@ -464,7 +383,7 @@
                                     </a>
                                 </div>
 
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                <p data-i18n="project3_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3">
                                     Developed an e-commerce platform for managing online product sales, 
                                     including product catalog browsing, order processing, and customer 
                                     account management.
@@ -482,7 +401,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project 3 -->
+             
                    <div class="border border-gray-200 dark:border-gray-800 
                                 rounded-lg p-5 hover:border-primary transition">
                         <div class="flex flex-col md:flex-row gap-5">
@@ -497,7 +416,7 @@
                              <div class="flex-1 flex flex-col">
 
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
+                                    <h3 data-i18n="project4_title" class="text-sm font-semibold">
                                         IT and Software Solutions
                                     </h3>
 
@@ -508,7 +427,7 @@
                                     </a>
                                 </div>
 
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                <p data-i18n="project4_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3">
                                     IT solutions aimed at providing comprehencive services to businesses in need of technological solutions.
                                 </p>
 
@@ -524,22 +443,22 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project 2 -->
+             
                     <div class="border border-gray-200 dark:border-gray-800 
                                 rounded-lg p-5 hover:border-primary transition">
                         <div class="flex flex-col md:flex-row gap-5">
-                            <!-- Project Image -->
+                        
                             <div class="md:w-72 flex-shrink-0">
                                 <img src="assets/img/mlsp.png"
                                     alt="Online Services Platform – Ministry of Labor and Social Protection of Turkmenistan"
                                     class="w-full aspect-video object-cover rounded-lg">
                             </div>
 
-                            <!-- Project Content -->
+                        
                              <div class="flex-1 flex flex-col">
 
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
+                                    <h3 data-i18n="project5_title" class="text-sm font-semibold">
                                         Online Services Platform – Ministry of Labor and Social Protection of Turkmenistan
                                     </h3>
 
@@ -550,7 +469,7 @@
                                     </a>
                                 </div>
 
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                <p data-i18n="project5_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3">
                                     Contributed to the development of a dynamic online services platform 
                                     for the Ministry of Labor and Social Protection of Turkmenistan.
 
@@ -559,7 +478,7 @@
                                     displaying job opportunities across Turkmenistan.
                                 </p>
 
-                                <!-- Tags -->
+                          
                                 <div class="mt-auto flex flex-wrap gap-2 text-xs">
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Vue.js</span>
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Bootstrap</span>
@@ -576,22 +495,22 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project 1 -->
+                  
                     <div class="border border-gray-200 dark:border-gray-800 
                                 rounded-lg p-5 hover:border-primary transition">
                         <div class="flex flex-col md:flex-row gap-5">
-                            <!-- Project Image -->
+                          
                             <div class="md:w-72 flex-shrink-0">
                                 <img src="assets/img/bank.png"
                                     alt="Bank Microservices Project"
                                     class="w-full aspect-video object-cover rounded-lg">
                             </div>
 
-                            <!-- Project Content -->
+                        
                             <div class="flex-1 flex flex-col">
 
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-sm font-semibold">
+                                    <h3 data-i18n="project6_title" class="text-sm font-semibold">
                                         Microservices Banking Platform – Stock Commercial Bank “Rysgal”
                                     </h3>
 
@@ -602,7 +521,7 @@
                                     </a>
                                 </div>
 
-                                <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                                <p data-i18n="project6_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3">
                                     Contributed to the development of a production-grade microservices platform 
                                     for Stock Commercial Bank “Rysgal”, including Internet Banking and 
                                     supporting financial services.
@@ -610,7 +529,7 @@
                                     Focused on scalability, system stability, and secure authentication mechanisms.
                                 </p>
 
-                                <!-- Tags -->
+                          
                                 <div class="mt-auto flex flex-wrap gap-2 text-xs">
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Bootstrap</span>
                                     <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Python</span>
@@ -628,64 +547,63 @@
         </section>
         <section id="honors" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
             border border-gray-200 dark:border-gray-800 p-8 space-y-6 relative">
-            <h2 class="text-lg font-semibold">Honors & Awards</h2>
+            <h2 class="text-lg font-semibold" data-i18n="honors_title">Honors & Awards</h2>
             <div class="space-y-4">
                 <div class="border border-gray-200 dark:border-gray-800 
                             rounded-lg p-5 hover:border-primary transition">
                     <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-sm font-semibold">
+                        <h3 class="text-sm font-semibold" data-i18n="honor1_title">
                             NASA Space Apps Challenge — Main Developer Recognition
                         </h3>
-                        <a class="text-xs text-primary" href="https://github.com/GuljahanG/nasa-impactor" target="_blank">
+                        <a data-i18n="honor1_badge" class="text-xs text-primary" href="https://github.com/GuljahanG/nasa-impactor" target="_blank">
                             Global Nominee
                         </a>
                     </div>
-                    <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                    <p data-i18n="honor1_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3">
                         Served as the main developer of the team during the international 
                         NASA Space Apps Challenge hackathon. Built the core technical 
                         implementation of the project and contributed to the solution 
                         that advanced to the global judging stage.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Hackathon</span>
-                        <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Team Project</span>
-                        <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Global Nominee</span>
+                        <span data-i18n="honor1_tag1" class="bg-primary/10 text-primary px-2 py-1 rounded-md">Hackathon</span>
+                        <span data-i18n="honor1_tag2" class="bg-primary/10 text-primary px-2 py-1 rounded-md">Team Project</span>
+                        <span data-i18n="honor1_tag3" class="bg-primary/10 text-primary px-2 py-1 rounded-md">Global Nominee</span>
                     </div>
                 </div>
                 <div class="border border-gray-200 dark:border-gray-800 
                             rounded-lg p-5 hover:border-primary transition">
                     <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-sm font-semibold">
+                        <h3 data-i18n="honor2_title" class="text-sm font-semibold">
                             Laravel Translator — VS Code Extension
                         </h3>
-                        <a class="text-xs text-primary" href="https://marketplace.visualstudio.com/items?itemName=IlmedovaGuljahan.laravel-translator-helper" target="_blank">
+                        <a data-i18n="honor2_badge" class="text-xs text-primary" href="https://marketplace.visualstudio.com/items?itemName=IlmedovaGuljahan.laravel-translator-helper" target="_blank">
                             260+ Downloads
                         </a>
                     </div>
-                    <p class="text-xs text-gray-600 dark:text-gray-400 mb-3">
+                    <p data-i18n="honor2_desc" class="text-xs text-gray-600 dark:text-gray-400 mb-3">
                         Created and published a Visual Studio Code extension designed 
                         to simplify translation management in Laravel applications. 
                         The extension improves developer productivity by enabling quick 
                         navigation between localization files and translation keys.
                     </p>
                     <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Open Source</span>
-                        <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">VS Code Extension</span>
-                        <span class="bg-primary/10 text-primary px-2 py-1 rounded-md">Developer Tools</span>
+                        <span data-i18n="honor2_tag1" class="bg-primary/10 text-primary px-2 py-1 rounded-md">Open Source</span>
+                        <span data-i18n="honor2_tag2" class="bg-primary/10 text-primary px-2 py-1 rounded-md">VS Code Extension</span>
+                        <span data-i18n="honor2_tag3"class="bg-primary/10 text-primary px-2 py-1 rounded-md">Developer Tools</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
         <section id="contact" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm 
             border border-gray-200 dark:border-gray-800 p-8 space-y-6 relative">
-            <!-- blue accent line -->
+           
             <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xl"></div>
-            <h2 class="text-lg font-semibold">Contact</h2>
+            <h2 class="text-lg font-semibold" data-i18n="contact">Contact</h2>
             <div class="flex flex-col gap-4 text-sm">
 
-                <!-- Email -->
+              
                 <a href="mailto:gurbanmyradownaguljahan@gmail.com" class="flex items-center gap-3 hover:text-primary transition">
                     <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 13.065L.015 4.5C.005 4.665 0 4.832 0 5v14c0 
@@ -697,7 +615,7 @@
                     gurbanmyradownaguljahan@gmail.com
                 </a>
 
-                <!-- LinkedIn -->
+             
                 <a href="https://www.linkedin.com/in/guljahan-ilmedova-a9540b256/" target="_blank"
                     class="flex items-center gap-3 hover:text-primary transition">
                     <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
@@ -705,7 +623,7 @@
                     LinkedIn
                 </a>
 
-                <!-- GitHub -->
+            
                 <a href="https://github.com/GuljahanG" target="_blank"
                     class="flex items-center gap-3 hover:text-primary transition">
 
@@ -713,7 +631,7 @@
                     GitHub
                 </a>
 
-                <!-- Telegram -->
+             
                 <a href="https://t.me/guljahanG" target="_blank"
                     class="flex items-center gap-3 hover:text-primary transition">
 
@@ -729,6 +647,131 @@
             document.documentElement.classList.toggle('dark')
         }
         lucide.createIcons()
+        const translations = {
+        en: {
+            about: "About",
+            skills: "Skills",
+            projects: "Projects",
+            stats: "Stats",
+            honors: "Honors",
+            contact: "Contact",
+
+            role: "Full Stack Developer",
+
+            skills_title: "Skills",
+            stats_title: "Statistics",
+            projects_title: "Projects",
+            honors_title: "Honors & Awards",
+            contact_title: "Contact",
+            download_cv: "Download Resume",
+            about_desc: "I build scalable backend systems using Python FastAPI and PHP Laravel, and modern frontend applications with Vue and Nuxt.js. Focused on clean architecture and performance optimization.",
+            languages: "Languages",
+            project1_title: "AI-Helper for Test Preparation Platform",
+            project1_desc: "Developing an AI-powered test preparation platform designed to simulate real exam environments and provide adaptive learning experiences. Integrated OpenAI APIs to dynamically generate practice tasks, evaluate user responses, and deliver instant feedback.",
+
+            project2_title: "CreativeParadise - All-in-One Business Platform",
+            project2_desc: "Contributed to the development of an all-in-one business management platform, designing and implementing a scalable task management module with nested tasks and real-time updates. Optimized database queries and improved performance.",
+
+            project3_title: "E-commerce Platform",
+            project3_desc: "Developed an e-commerce platform for managing online product sales, including catalog browsing, order processing, and customer account management.",
+
+            project4_title: "IT and Software Solutions",
+            project4_desc: "IT solutions aimed at providing comprehensive services to businesses in need of technological solutions.",
+
+            project5_title: "Online Services Platform – Ministry of Labor and Social Protection of Turkmenistan",
+            project5_desc: "Developed a user-friendly platform for accessing government services and integrated a nationwide job vacancy system across Turkmenistan.",
+
+            project6_title: "Microservices Banking Platform – Stock Commercial Bank “Rysgal”",
+            project6_desc: "Contributed to building a scalable microservices banking platform including Internet Banking, focusing on security, stability, and performance.",
+            honor1_title: "NASA Space Apps Challenge — Main Developer Recognition",
+            honor1_badge: "Global Nominee",
+            honor1_desc: "Served as the main developer of the team during the international NASA Space Apps Challenge hackathon. Built the core technical implementation of the project and contributed to the solution that advanced to the global judging stage.",
+            honor1_tag1: "Hackathon",
+            honor1_tag2: "Team Project",
+            honor1_tag3: "Global Nominee",
+
+            honor2_title: "Laravel Translator — VS Code Extension",
+            honor2_badge: "260+ Downloads",
+            honor2_desc: "Created and published a Visual Studio Code extension designed to simplify translation management in Laravel applications. The extension improves developer productivity by enabling quick navigation between localization files and translation keys.",
+            honor2_tag1: "Open Source",
+            honor2_tag2: "VS Code Extension",
+            honor2_tag3: "Developer Tools",
+        },
+
+        ru: {
+            about: "Обо мне",
+            skills: "Навыки",
+            projects: "Проекты",
+            stats: "Статистика",
+            honors: "Награды",
+            contact: "Контакты",
+
+            role: "Full Stack разработчик",
+
+            skills_title: "Навыки",
+            stats_title: "Статистика",
+            projects_title: "Проекты",
+            honors_title: "Награды и достижения",
+            contact_title: "Контакты",
+            download_cv: "Скачать резюме",
+            about_desc: "Я разрабатываю масштабируемые серверные системы с использованием Python FastAPI и PHP Laravel, а также современные фронтенд-приложения на Vue и Nuxt.js. Сфокусирована на чистой архитектуре и оптимизации производительности.",
+            languages: "Languages",
+            project1_title: "AI-помощник для подготовки к тестам",
+            project1_desc: "Разработка платформы подготовки к тестам на базе искусственного интеллекта, имитирующей реальные экзаменационные условия и обеспечивающей адаптивное обучение. Интеграция OpenAI API для генерации заданий и оценки ответов.",
+
+            project2_title: "CreativeParadise — универсальная бизнес-платформа",
+            project2_desc: "Участвовала в разработке платформы для управления бизнесом, реализовала модуль управления задачами с вложенной структурой и обновлениями в реальном времени. Оптимизировала запросы к базе данных.",
+
+            project3_title: "Платформа электронной коммерции",
+            project3_desc: "Разработала платформу для онлайн-продаж с каталогом товаров, обработкой заказов и управлением аккаунтами пользователей.",
+
+            project4_title: "IT и программные решения",
+            project4_desc: "Разработка IT-решений для предоставления комплексных технологических услуг бизнесу.",
+
+            project5_title: "Платформа онлайн-услуг — Министерство труда Туркменистана",
+            project5_desc: "Разработала удобный интерфейс для доступа к государственным услугам и внедрила систему вакансий по всей стране.",
+
+            project6_title: "Микросервисная банковская платформа — банк «Рысгал»",
+            project6_desc: "Участвовала в разработке масштабируемой банковской платформы, включая интернет-банкинг, с акцентом на безопасность и стабильность.",
+            honor1_title: "NASA Space Apps Challenge — признание как главный разработчик",
+            honor1_badge: "Глобальный номинант",
+            honor1_desc: "Выступала главным разработчиком команды на международном хакатоне NASA Space Apps Challenge. Реализовала ключевую техническую часть проекта и внесла вклад в решение, прошедшее на глобальный этап оценки.",
+            honor1_tag1: "Хакатон",
+            honor1_tag2: "Командный проект",
+            honor1_tag3: "Глобальный номинант",
+
+            honor2_title: "Laravel Translator — расширение для VS Code",
+            honor2_badge: "260+ загрузок",
+            honor2_desc: "Разработала и опубликовала расширение для Visual Studio Code, упрощающее управление переводами в Laravel-приложениях. Расширение повышает продуктивность разработчиков благодаря быстрой навигации по файлам локализации.",
+            honor2_tag1: "Open Source",
+            honor2_tag2: "VS Code Extension",
+            honor2_tag3: "Developer Tools",
+        
+        
+        }
+    };
+
+    // SWITCH FUNCTION
+    function setLanguage(lang) {
+        localStorage.setItem("lang", lang);
+
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.getAttribute("data-i18n");
+
+            if (translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+    }
+
+    // LOAD LANGUAGE
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedLang = localStorage.getItem("lang") || "en";
+        document.getElementById("langSwitcher").value = savedLang;
+        setLanguage(savedLang);
+    });
+
+    lucide.createIcons();
     </script>
 
 </body>
